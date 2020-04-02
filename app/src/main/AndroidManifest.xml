@@ -3,14 +3,15 @@
     package="tourguide.tourguidedemo">
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher1"
+        android:icon="@drawable/tour_guide_icon"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
             android:name=".ToolbarActivity"
             android:label="Toolbar Activity"
-            android:theme="@style/AppThemeNoActionBar"/>
+            android:theme="@style/AppThemeNoActionBar" />
         <activity
             android:name=".BasicActivity"
             android:label="Basic Activity" />
@@ -36,13 +37,45 @@
             android:name=".NoOverlayActivity"
             android:label="No Overlay Activity" />
         <activity
-            android:name=".TourGuideDemoMain"
+            android:name=".ManualSequenceActivity"
+            android:label="Manual Sequence Activity" />
+        <activity
+            android:name=".OverlaySequenceTourActivity"
+            android:label="Overlay Activity (using Sequence Class)" />
+        <activity
+            android:name=".NavDrawerActivity"
+            android:label="Navigational Drawer Activity"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".MemoryLeakTestActivity"
+            android:label="Memory Leak Test Activity" />
+        <activity
+            android:name=".RoundedRectangleOverlayActivity"
+            android:label="Rounded Rectangle Activity" />
+        <activity
+            android:name=".AdjustPaddingOverlayActivity"
+            android:label="Adjust Overlay Padding Activity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".RecyclerViewActivity"
+            android:label="RecyclerView Activity" />
+        <activity
+            android:name=".main.MainActivity"
             android:label="Tour Guide Demo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <!-- Test Activity -->
+        <activity
+            android:name="tourguide.instrumentation.test.ToolTipMeasureTestActivity"
+            android:exported="true"
+            android:label="ToolTip Measure Test Activity" />
+
     </application>
 
 </manifest>
